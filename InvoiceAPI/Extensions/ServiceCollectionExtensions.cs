@@ -1,4 +1,5 @@
-﻿using InvoiceAPI.Interfaces;
+﻿using InvoiceAPI.Data;
+using InvoiceAPI.Interfaces;
 using InvoiceAPI.Repositories;
 using InvoiceAPI.Services;
 
@@ -9,6 +10,7 @@ namespace InvoiceAPI.Extensions
         public static IServiceCollection RegisterServices(this IServiceCollection services)
         {
             // Repositories
+            services.AddScoped<DapperContext>();
             services.AddScoped<IDapperRepository, DapperRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IInvoiceRepository, InvoiceRepository>();

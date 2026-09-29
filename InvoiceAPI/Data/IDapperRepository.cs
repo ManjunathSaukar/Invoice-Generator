@@ -1,6 +1,6 @@
 ﻿using Dapper;
 
-namespace InvoiceAPI.Interfaces
+namespace InvoiceAPI.Data
 {
     public interface IDapperRepository
     {
